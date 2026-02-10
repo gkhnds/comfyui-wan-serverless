@@ -14,7 +14,7 @@ from pathlib import Path
 COMFYUI_DIR = "/workspace/ComfyUI"
 COMFYUI_PORT = 8188
 COMFYUI_URL = f"http://localhost:{COMFYUI_PORT}"
-WORKFLOW_FILE = "/workspace/ComfyUI/user/default/workflows/iraKim_text_to_video_wan .json"
+WORKFLOW_FILE = "/workspace/ComfyUI/user/default/workflows/iraKim_text_to_video_wan.json"
 
 # Global process handle
 comfyui_process = None
