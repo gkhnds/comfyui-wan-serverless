@@ -59,7 +59,13 @@ def start_comfyui():
         return False
 
     # Check for network volume models directory
+    # Try multiple possible paths for network volume
+if os.path.exists("/runpod-volume/models"):
+    network_models = "/runpod-volume/models"
+elif os.path.exists("/workspace/models"):
     network_models = "/workspace/models"
+else:
+    network_models = "/workspace/models"  # fallback
     comfyui_models = os.path.join(COMFYUI_DIR, "models")
     
     if os.path.exists(network_models):
